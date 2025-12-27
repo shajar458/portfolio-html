@@ -8,6 +8,7 @@
 
 <header>
     <h1>My Portfolio</h1>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
 </header>
 
 <nav>
@@ -27,6 +28,7 @@
 
 <section id="skills">
     <h2>Skills</h2>
+    <button onclick="toggleSkills()">Show / Hide Skills</button>
     <ul>
         <li>HTML</li>
         <li>CSS (Basic)</li>
@@ -36,17 +38,18 @@
 
 <section id="contact">
     <h2>Contact Me</h2>
-    <form>
+<form onsubmit="validateForm(event)">
         <label>Name:</label><br>
-        <input type="text"><br><br>
+        <input type="text" id="name"><br><br>
 
         <label>Email:</label><br>
-        <input type="email"><br><br>
+        <input type="email" id="email"><br><br>
 
         <label>Message:</label><br>
-        <textarea></textarea><br><br>
+        <textarea id="message"></textarea><br><br>
 
         <button type="submit">Submit</button>
+        <p id="form-msg"></p>
     </form>
 </section>
 
@@ -55,8 +58,7 @@
 <footer>
     <p>© 2025 My Portfolio</p>
 </footer>
+<script src="script.js"></script>
 
 </body>
 </html>
-
-
